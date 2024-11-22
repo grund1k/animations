@@ -1,0 +1,44 @@
+---
+interface Props {
+  className?: string
+}
+
+const { className } = Astro.props
+---
+
+<div class:list={['opened-box', className]}>
+  <div class="opened-box__sticky">
+    <div class="opened-box__item">
+      <ul class="opened-box__list">
+        <li class="opened-box__list-item">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor esse eius dignissimos laboriosam suscipit laborum! Facilis, sunt blanditiis voluptates veritatis accusantium minima dicta corporis animi non tempore doloribus harum minus.
+          <span class="opened-box__bg"></span>
+        </li>
+        <li class="opened-box__list-item">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor esse eius dignissimos laboriosam suscipit laborum! Facilis, sunt blanditiis voluptates veritatis accusantium minima dicta corporis animi non tempore doloribus harum minus.
+          <span class="opened-box__bg"></span>
+        </li>
+        <li class="opened-box__list-item">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor esse eius dignissimos laboriosam suscipit laborum! Facilis, sunt blanditiis voluptates veritatis accusantium minima dicta corporis animi non tempore doloribus harum minus.
+          <span class="opened-box__bg"></span>
+        </li>
+        <li class="opened-box__list-item">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor esse eius dignissimos laboriosam suscipit laborum! Facilis, sunt blanditiis voluptates veritatis accusantium minima dicta corporis animi non tempore doloribus harum minus.
+          <span class="opened-box__bg"></span>
+        </li>
+        <li class="opened-box__list-item">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor esse eius dignissimos laboriosam suscipit laborum! Facilis, sunt blanditiis voluptates veritatis accusantium minima dicta corporis animi non tempore doloribus harum minus.
+          <span class="opened-box__bg"></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  import { OpenedBoxAnimation } from './opened-box-animation'
+
+  window.addEventListener('DOMContentLoaded', () => {
+    new OpenedBoxAnimation(document.querySelector('.opened-box')).init()
+  })
+</script>

@@ -1,0 +1,35 @@
+
+@use "@styles/global/variables";
+@use "@styles/global/mixins";
+@use "@styles/global/functions";
+
+.box-list {
+  position: relative;
+  z-index: 2;
+  max-width: 80%;
+  margin: 0 auto;
+  list-style: none;
+  padding: functions.size(200) 0 functions.size(700);
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: functions.size(350);
+  justify-items: center;
+  gap: functions.size(30);
+  overflow: hidden;
+
+  &__item {
+    width: functions.size(350);
+    height: functions.size(350);
+
+    opacity: 0;
+    transform: translate3d(0, 20%, 0);
+    cursor: pointer;
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-white);
+  }
+}

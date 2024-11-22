@@ -1,0 +1,23 @@
+---
+interface Props {
+  className?: string
+}
+
+const { className } = Astro.props
+---
+
+<ul class:list={['box-list', className]}>
+  {Array.from({ length: 8 }).map((_, i) => (
+    <li class="box-list__item" data-open={i === 6 ? true : false}>
+      <div class="box-list__content"></div>
+    </li>
+  ))}
+</ul>
+
+<script>
+  import { BoxListAnimation } from './box-list-animation'
+
+  window.addEventListener('DOMContentLoaded', () => {
+    new BoxListAnimation(document.querySelector('.box-list')).init()
+  })
+</script>
